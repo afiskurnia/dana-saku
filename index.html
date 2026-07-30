@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DanaSaku - pelacak keuangan pribadi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=account_circle" />
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">💵 DanaSaku</div>
+        <div class="nav-profile-wrapper">
+            <a href="https://www.dicoding.com/users/afis_kurnia_sari" target="_blank" rel="noopener" class="nav-profile-text">Akun Saya</a>
+            
+            <a href="https://www.dicoding.com/users/afis_kurnia_sari" target="_blank" rel="noopener" class="nav-profile-icon">
+                <span class="material-symbols-outlined icon-mini">account_circle</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+
+        <header class="content-header">
+            <h1>Aplikasi Pelacak Keuangan Pribadi</h1>
+            <p>Pantau pemasukan dan pengeluaran harian Anda dengan mudah.</p>
+        </header>
+
+        <div class="main-container-flex">
+
+            <main class="main-content">
+                
+                <section class="balance-card">
+                    <h2>Ringkasan Saldo</h2>
+                    <div class="balance-flex">
+                        <div class="balance-box total">
+                            <h3>Saldo Saat ini</h3>
+                            <p id="totalBalance">Rp 3.000.000</p>
+                        </div>
+                        <div class="balance-box income">
+                            <h3>Pemasukan</h3>
+                            <p id="totalIncome">Rp 3.500.000</p>
+                        </div>
+                        <div class="balance-box expense">
+                            <h3>Pengeluaran</h3>
+                            <p id="totalExpense">Rp 500.000</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="form-card">
+                    <h2>Catat Transaksi Baru</h2>
+                    <form id="transactionForm">
+                        <div class="input-group">
+                            <label for="title">Nama Transaksi</label>
+                            <input type="text" id="title" placeholder="Contoh: Gaji, Beli Makan Siang" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="amount">Nominal Uang (Rp)</label>
+                            <input type="number" id="amount" min="1" placeholder="Contoh: 50000" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Jenis Transaksi</label>
+                            <div class="radio-flex">
+                                <label><input type="radio" name="type" value="income" checked> Pemasukan (+)</label>
+                                <label><input type="radio" name="type" value="expense"> Pengeluaran (-)</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-submit">Tambah Transaksi</button>
+                    </form>
+                </section>
+
+                <section class="history-card">
+                    <h2>Riwayat Keuangan</h2>
+                    <input type="text" id="searchBar" placeholder="Cari catatan transaksi...">
+                    
+                    <!-- <div id="transactionContainer">
+                        <p class="empty-text">Belum ada catatan transaksi.</p>
+                    </div> -->
+                    <div id="transactionContainer">
+                        <div class="transaction-item income-item">
+                            <div class="trx-info">
+                                <h4>Gaji Bulanan</h4>
+                                <small>Pemasukan</small>
+                            </div>
+                            <p class="trx-amount">+ Rp 3.500.000</p>
+                        </div>
+
+                        <div class="transaction-item expense-item">
+                            <div class="trx-info">
+                                <h4>Buku</h4>
+                                <small>Pengeluaran</small>
+                            </div>
+                            <p class="trx-amount">- Rp 450.000</p>
+                        </div>
+
+                        <div class="transaction-item expense-item">
+                            <div class="trx-info">
+                                <h4>Jajan</h4>
+                                <small>Pengeluaran</small>
+                            </div>
+                            <p class="trx-amount">- Rp 50.000</p>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+
+            <aside class="sidebar-content">
+                <div class="profile-box">
+                    <h2>Profil Pengguna</h2>
+                    <img src="images/ilustrasi-profil.jpg" alt="foto profil pengguna" class="user-avatar">
+                    <p class="user-name">Afis Kurnia Sari</p>
+                    <p class="user-role">Personal Financial Planner</p>
+                </div>
+               
+                <article class="tips-box">
+                    <h3>Tips Hari Ini</h3>
+                    <p>"Uang bisa dicari, tapi manajemen keuangan yang baik harus dibiasakan sejak dini."</p>
+                </article>
+            </aside>
+
+        </div> </div> <footer class="footer-content">
+        <p>&copy; 2026 DanaSaku App — Proyek Akhir Pengembangan Front-End Web.</p>
+    </footer>
+
+    <!-- notifikasi -->
+    <div id="toast" class="toast">Transaksi berhasil ditambahkan!</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
