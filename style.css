@@ -215,28 +215,26 @@ h2 {
     margin-top: 60px;
 }
 
-/* 1. Kondisi Awal Toast (Sembunyi) */
 .toast {
-  visibility: hidden;         /* Sembunyi secara visual */
-  opacity: 0;                 /* Transparan */
-  position: fixed;            /* Melayang (mengambang di atas elemen lain) */
-  bottom: 20px;               /* Jarak dari batas bawah layar */
-  right: 30px;                /* Jarak dari batas kanan layar */
-  background-color: #2e7d32;  /* Warna hijau sukses */
-  color: #ffffff;             /* Warna teks putih */
-  padding: 12px 24px;         /* Jarak dalam agar kotak terasa lega */
-  border-radius: 8px;         /* Sudut membulat */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Efek bayangan halus */
+  visibility: hidden;         
+  opacity: 0;                 
+  position: fixed;            
+  bottom: 20px;               
+  right: 30px;                
+  background-color: #2e7d32; 
+  color: #ffffff;            
+  padding: 12px 24px;         
+  border-radius: 8px;         
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
   font-weight: 600;
-  z-index: 9999;              /* Memastikan toast selalu berada di lapisan paling depan */
-  transition: opacity 0.3s ease, bottom 0.3s ease; /* Efek animasi pergerakan halus */
+  z-index: 9999;              
+  transition: opacity 0.3s ease, bottom 0.3s ease;
 }
 
-/* 2. Kondisi Saat Toast Ditampilkan (Muncul) */
 .toast.show {
-  visibility: visible;        /* Muncul di layar */
-  opacity: 1;                 /* Jelas (tidak transparan) */
-  bottom: 40px;               /* Sedikit naik ke atas saat muncul (efek animasi) */
+  visibility: visible;        
+  opacity: 1;                 
+  bottom: 40px;               
 }
 
 @media screen and (max-width: 768px) {
